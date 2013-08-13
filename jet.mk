@@ -172,7 +172,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # the the build-time selection of resources). The product definitions including
 # this file must pay attention to the fact that the first entry in the final
 # PRODUCT_LOCALES expansion must not be a density.
-PRODUCT_LOCALES := mdpi
+PRODUCT_LOCALES := hdpi
 
 # Kernel
 LOCAL_KERNEL := device/samsung/jet/kernel.bin
