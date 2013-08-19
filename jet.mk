@@ -87,7 +87,17 @@ PRODUCT_PACKAGES += \
     libsec-ril.so \
     libsecril-client.so \
     dexpreopt \
-    libGLES_fimg
+    libGLES_fimg \
+    LiveWallpapers \
+    LiveWallpapersPicker \
+    VisualizationWallpapers \
+    MagicSmokeWallpapers \
+    VisualizationWallpapers \
+    librs_jni \
+    Gallery3d \
+    SpareParts \
+    Development \
+    Term
 
 # Device specific apps
 PRODUCT_PACKAGES += \
@@ -168,11 +178,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.kernel.android.checkjni=0 \
     dalvik.vm.checkjni=false
 
-# Screen density is actually considered a locale (since it is taken into account
-# the the build-time selection of resources). The product definitions including
-# this file must pay attention to the fact that the first entry in the final
-# PRODUCT_LOCALES expansion must not be a density.
-PRODUCT_LOCALES := mdpi
+# Jet uses high-density artwork where available
+PRODUCT_LOCALES += hdpi
+
+# This should not be needed but on-screen keyboard uses the wrong density without it.
+PRODUCT_PROPERTY_OVERRIDES += \
+    qemu.sf.lcd_density=240
 
 # Kernel
 LOCAL_KERNEL := device/samsung/jet/kernel.bin
