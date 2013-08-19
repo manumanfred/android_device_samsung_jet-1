@@ -191,6 +191,13 @@ on boot
     chown system system /sys/kernel/ipv4/tcp_rmem_max
     chown root radio /proc/cmdline
 
+    chmod 0777 /sys/class/timed_output/flash/enable
+    chmod 0777 /sys/class/switch/send_end/state
+    chmod 0777 /sys/class/timed_output/vibrator/enable
+    chmod 0777 /sys/devices/platform/s3c-lcd/lcd_power
+    chmod 0777 /sys/class/lightsensor/switch_cmd/lightsensor_file_state
+    chmod 0777 /sys/class/lightsensor/switch_cmd/lightsensor_file_cmd
+
 # Define TCP buffer sizes for various networks
 #   ReadMin, ReadInitial, ReadMax, WriteMin, WriteInitial, WriteMax,
     setprop net.tcp.buffersize.default 4096,87380,110208,4096,16384,110208
