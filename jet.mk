@@ -86,6 +86,7 @@ PRODUCT_PACKAGES += \
     libsecgps.so \
     libsec-ril.so \
     libsecril-client.so \
+    efsd \
     dexpreopt \
     libGLES_fimg \
     LiveWallpapers \
